@@ -156,4 +156,4 @@ How to USE
 ```
 Plunker
 =======
-http://plnkr.co/edit/t3lOaXulnk2j1WfN9oIP?p=preview
+http://plnkr.co/edit/sUFdW4lulu2NQBvn9fq0?p=preview
