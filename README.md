@@ -98,7 +98,7 @@ $scope.priceSlider = {
     rz-slider-high="priceSlider.max"></rzslider>
 ```
 
-###Steped Slider
+###Stepped Slider
 
 ```
 // In your controller
