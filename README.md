@@ -1,14 +1,21 @@
 angular-slider (rzslider.js)
 ========================
-
-Slider directive for AngularJS wtih additional Features which can be used independently
+```
+Slider directive for AngularJS which can be used independently 
 
 Mobile friendly
-Fast
-Well documented
-Customizable
-Simple to use
-Compatibility with jQuery Lite, ie. with full jQuery
+Fast and Customizable
+Very Simple to use
+Compatibility with jQuery Lite
+
+Few additional Features has been added to this directive
+
+1. rz-slider-step-array - New attribute to support irregular steps step array
+   Ex: [1,2,5,10,20,50,100,200,400,500,700,1000]
+2. rz-slider-display-scale - scale support for step array.
+3. rz-slider-selection - flag to highlight selction in slider with different color
+
+```
 
 Directive attributes
 ====================
@@ -95,6 +102,16 @@ $scope.$on('slideEnded', function () {
 
 ```
 
+How to USE
+==========
+```
+<script src="/angular.min.js"></script>
+<script src="/rzslider.min.js"></script>
+
+<script>
+    var myApp = angular.module('myApp', ['rzModule']);
+</script>
+```
 Plunker
 =======
 http://plnkr.co/edit/t3lOaXulnk2j1WfN9oIP?p=preview
