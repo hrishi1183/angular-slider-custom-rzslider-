@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.20/angular.js" data-semver="1.2.20"></script>
+  <script src="rzslider.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div class="general-config" ng-controller="sliderController" ng-init="init()">
+    <rzslider class="rzslider-evc-size"
+				id="componentDetails.id" rz-slider-floor="componentDetails.floor"
+				rz-slider-ceil="componentDetails.ceil"
+				rz-slider-model="componentDetails.value"
+				rz-slider-step-array="componentDetails.stepArray"
+				rz-slider-translate="componentDetails.translate"
+				rz-slider-selection="componentDetails.selection"
+				rz-slider-display-scale="componentDetails.displayScale"> </rzslider>		
+			<span class="sliderinputbox"> 
+				<input num-only
+					ng-keypress="onSliderEnter($event)" readonly="readonly"
+					class="slidervaluebox disablepointer1" id="inputTrueBandwidth" min="0"
+					max="{{componentDetails.stepArray[componentDetails.ceil]}}"
+					ng-blur="validateSliderRange();" type="text"
+					ng-model="componentDetails.typedValue"/> 
+				<span class="slidervalueincrdecr">
+					<span ng-click="componentDetails.incrSpeed()"
+					ng-class="(componentDetails.typedValue!=componentDetails.stepArray[componentDetails.ceil]) ? 'sliderTextIncrementer' : 'sliderTextIncrementerDisabled'"></span>
+					<span ng-click="componentDetails.decrSpeed()"
+					ng-class="(componentDetails.typedValue!=componentDetails.stepArray[componentDetails.floor]) ? 'sliderTextDecrementer' : 'sliderTextDecrementerDisabled'"></span>
+				</span>
+			</span>
+  </div>
+</body>
+</html>
+ fa
